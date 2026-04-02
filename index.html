@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제 5세대 - 코딩 동아리</title>
+    <style>
+        /* 기본 리셋 */
+        body { margin: 0; font-family: 'Malgun Gothic', sans-serif; }
+        
+        /* ⭐️ 부드러운 스크롤 마법 ⭐️ */
+        html { scroll-behavior: smooth; }
+        
+        /* 네비게이션 바 디자인 */
+        nav {
+            background-color: #0b051a;
+            padding: 20px;
+            text-align: center;
+            position: sticky; /* 화면을 내려도 메뉴바가 위에 딱 붙어있게 함 */
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none; /* 링크 밑줄 제거 */
+            margin: 0 15px; /* 메뉴 사이 간격 */
+            font-weight: bold;
+        }
+        nav a:hover { color: #00ffcc; } /* 마우스를 올리면 초록색으로 변함 */
+
+        /* 각 구역(Section) 디자인 */
+        .section-hero { background-color: #0b051a; color: white; padding: 150px 20px; text-align: center; }
+        .section-features { background-color: #f8f9fa; color: #333; padding: 100px 20px; text-align: center; }
+        .section-testimonials { background-color: #12141d; color: white; padding: 100px 20px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#members">Members</a>
+    </nav>
+
+    <section id="home" class="section-hero">
+        <h3 style="color: #00ffcc;">건국대학교 글로컬캠퍼스</h3>
+        <h1>제 5세대</h1>
+        <p>함께 코딩하고, 함께 성장하는 공간.</p>
+    </section>
+
+    <section id="about" class="section-features">
+        <h4 style="color: #00ffcc;">WHAT WE DO</h4>
+        <h2>우리는 함께 성장합니다</h2>
+        <p>여기에 활동 내용이 들어갑니다.</p>
+    </section>
+
+    <section id="members" class="section-testimonials">
+        <h4 style="color: #00ffcc;">MEMBER STORIES</h4>
+        <h2>동아리원들의 이야기</h2>
+        <p>여기에 멤버들 소개가 들어갑니다.</p>
+    </section>
+
+    <div style="height: 1000px; background-color: #000;"></div>
+
+</body>
+</html>
