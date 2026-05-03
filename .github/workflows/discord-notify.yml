@@ -1,0 +1,32 @@
+name: Discord Push Notification
+
+on: [push] # 누군가 코드를 푸시할 때마다 작동
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest # 깃허브의 우분투 가상 서버에서 실행
+    steps:
+      - name: Send Discord Webhook via Python
+        env:
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          PUSHER: ${{ github.actor }}
+          REPO: ${{ github.event.repository.name }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          python -c '
+          import os, json, urllib.request
+          
+          # 디스코드에 보낼 메시지 조립
+          payload = {
+              "content": f"🚀 @everyone! **{os.environ.get(\"PUSHER\")}**님이 **{os.environ.get(\"REPO\")}** 레포지토리에 새 코드를 푸시했습니다.\n> 📝 커밋 내용: {os.environ.get(\"COMMIT_MSG\", \"커밋 메시지 없음\")}",
+              "allowed_mentions": {"parse": ["everyone"]}
+          }
+          
+          # 파이썬 기본 내장 라이브러리로 디스코드에 전송
+          req = urllib.request.Request(
+              os.environ["WEBHOOK_URL"], 
+              data=json.dumps(payload).encode("utf-8"), 
+              headers={"Content-Type": "application/json"}
+          )
+          urllib.request.urlopen(req)
+          '
