@@ -23,8 +23,8 @@ jobs:
           msg = os.environ.get("COMMIT_MSG", "커밋 메시지 없음")
           url = os.environ.get("COMMIT_URL", "")
           
+          # payload에서 "content": "@everyone" 부분을 삭제했습니다.
           payload = {
-              "content": "@everyone",
               "embeds": [{
                   "title": f"[{repo}] 새로운 푸시 알림",
                   "description": f"**{pusher}**님이 코드를 업데이트했습니다.\n\n**커밋 메시지:**\n`{msg}`",
@@ -34,11 +34,9 @@ jobs:
                       "name": pusher,
                       "icon_url": f"https://github.com/{pusher}.png"
                   }
-              }],
-              "allowed_mentions": {"parse": ["everyone"]}
+              }]
           }
           
-          # 디스코드 보안을 통과하기 위해 브라우저인 척 위장합니다 (User-Agent)
           headers = {
               "Content-Type": "application/json",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
