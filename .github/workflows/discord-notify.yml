@@ -6,32 +6,39 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Discord Webhook via Python
+      - name: Send Rich Discord Notification
         env:
           WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           PUSHER: ${{ github.actor }}
           REPO: ${{ github.event.repository.name }}
           COMMIT_MSG: ${{ github.event.head_commit.message }}
+          COMMIT_URL: ${{ github.event.head_commit.url }}
         run: |
           python3 -c '
           import os, json, urllib.request
           
-          # 환경 변수에서 데이터를 안전하게 가져옵니다.
           webhook_url = os.environ.get("WEBHOOK_URL")
           pusher = os.environ.get("PUSHER")
           repo = os.environ.get("REPO")
           msg = os.environ.get("COMMIT_MSG", "커밋 메시지 없음")
-          
-          # 메시지 내용을 변수로 먼저 만듭니다. (따옴표 에러 방지)
-          content = f"🚀 @everyone! **{pusher}**님이 **{repo}** 레포지토리에 새 코드를 푸시했습니다.\n> 📝 커밋 내용: {msg}"
-          
-          # 전송할 데이터 꾸러미(Payload) 생성
+          url = os.environ.get("COMMIT_URL", "")
+
+          # Master가 원하시는 예쁜 카드 형태(Embed) 데이터 조립
           payload = {
-              "content": content,
+              "content": "@everyone", # 태그는 따로 뺍니다.
+              "embeds": [{
+                  "title": f"[{repo}] 새로운 푸시 알림",
+                  "description": f"**{pusher}**님이 코드를 업데이트했습니다.\n\n**커밋 메시지:**\n`{msg}`",
+                  "url": url,
+                  "color": 5814783, # 깃허브 느낌의 파란색
+                  "author": {
+                      "name": pusher,
+                      "icon_url": f"https://github.com/{pusher}.png"
+                  }
+              }],
               "allowed_mentions": {"parse": ["everyone"]}
           }
-          
-          # 디스코드 웹훅 전송
+
           req = urllib.request.Request(
               webhook_url, 
               data=json.dumps(payload).encode("utf-8"), 
