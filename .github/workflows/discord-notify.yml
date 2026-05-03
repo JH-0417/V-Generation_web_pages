@@ -6,15 +6,21 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
       - name: Send Discord Notification
+=======
+      - name: Send Rich Discord Notification
+>>>>>>> c0e39321bbdde2e4f94de06649fe21d679883e45
         env:
           WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           PUSHER: ${{ github.actor }}
           REPO: ${{ github.event.repository.name }}
           COMMIT_MSG: ${{ github.event.head_commit.message }}
+          COMMIT_URL: ${{ github.event.head_commit.url }}
         run: |
           python3 -c '
           import os, json, urllib.request
+<<<<<<< HEAD
 
           # 안전하게 데이터를 변수에 담습니다.
           webhook_url = os.environ.get("WEBHOOK_URL")
@@ -29,6 +35,27 @@ jobs:
                   "title": f"[{repo}] Push Notification",
                   "description": f"**{pusher}**님이 새 코드를 올렸습니다!\n\n**Message:**\n`{msg}`",
                   "color": 5814783
+=======
+          
+          webhook_url = os.environ.get("WEBHOOK_URL")
+          pusher = os.environ.get("PUSHER")
+          repo = os.environ.get("REPO")
+          msg = os.environ.get("COMMIT_MSG", "커밋 메시지 없음")
+          url = os.environ.get("COMMIT_URL", "")
+
+          # Master가 원하시는 예쁜 카드 형태(Embed) 데이터 조립
+          payload = {
+              "content": "@everyone", # 태그는 따로 뺍니다.
+              "embeds": [{
+                  "title": f"[{repo}] 새로운 푸시 알림",
+                  "description": f"**{pusher}**님이 코드를 업데이트했습니다.\n\n**커밋 메시지:**\n`{msg}`",
+                  "url": url,
+                  "color": 5814783, # 깃허브 느낌의 파란색
+                  "author": {
+                      "name": pusher,
+                      "icon_url": f"https://github.com/{pusher}.png"
+                  }
+>>>>>>> c0e39321bbdde2e4f94de06649fe21d679883e45
               }],
               "allowed_mentions": {"parse": ["everyone"]}
           }
