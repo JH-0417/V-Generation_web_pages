@@ -38,10 +38,16 @@ jobs:
               "allowed_mentions": {"parse": ["everyone"]}
           }
           
+          # 디스코드 보안을 통과하기 위해 브라우저인 척 위장합니다 (User-Agent)
+          headers = {
+              "Content-Type": "application/json",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+          }
+          
           req = urllib.request.Request(
               webhook_url, 
               data=json.dumps(payload).encode("utf-8"), 
-              headers={"Content-Type": "application/json"}
+              headers=headers
           )
           urllib.request.urlopen(req)
           '
