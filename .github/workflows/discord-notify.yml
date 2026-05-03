@@ -6,7 +6,7 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Discord Webhook via Python
+      - name: Send Discord Notification
         env:
           WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           PUSHER: ${{ github.actor }}
@@ -15,26 +15,27 @@ jobs:
         run: |
           python3 -c '
           import os, json, urllib.request
-          
-          # 환경 변수에서 데이터를 안전하게 가져옵니다.
+
+          # 안전하게 데이터를 변수에 담습니다.
           webhook_url = os.environ.get("WEBHOOK_URL")
           pusher = os.environ.get("PUSHER")
           repo = os.environ.get("REPO")
-          msg = os.environ.get("COMMIT_MSG", "커밋 메시지 없음")
-          
-          # 메시지 내용을 변수로 먼저 만듭니다. (따옴표 에러 방지)
-          content = f"🚀 @everyone! **{pusher}**님이 **{repo}** 레포지토리에 새 코드를 푸시했습니다.\n> 📝 커밋 내용: {msg}"
-          
-          # 전송할 데이터 꾸러미(Payload) 생성
+          msg = os.environ.get("COMMIT_MSG", "No Message")
+
+          # Master가 원하시는 예쁜 카드 디자인 (Embed)
           payload = {
-              "content": content,
+              "content": "@everyone",
+              "embeds": [{
+                  "title": f"[{repo}] Push Notification",
+                  "description": f"**{pusher}**님이 새 코드를 올렸습니다!\n\n**Message:**\n`{msg}`",
+                  "color": 5814783
+              }],
               "allowed_mentions": {"parse": ["everyone"]}
           }
-          
-          # 디스코드 웹훅 전송
+
           req = urllib.request.Request(
-              webhook_url, 
-              data=json.dumps(payload).encode("utf-8"), 
+              webhook_url,
+              data=json.dumps(payload).encode("utf-8"),
               headers={"Content-Type": "application/json"}
           )
           urllib.request.urlopen(req)
