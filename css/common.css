@@ -1,0 +1,95 @@
+/*
+    2026.05.23
+    포함내용: 배경, 폰트, 네비게이션 바, 마우스 포인터
+*/
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   2. 전체 배경, 폰트 및 마우스 커서 적용
+   ========================================= */
+body { 
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; 
+    background-color: #0b051a; 
+    color: white; 
+    line-height: 1.6;
+    /* 직접 만든 SVG 커스텀 마우스 포인터 적용 */
+    cursor: url('../element/mouse_cursor.svg') 10 10, auto; 
+}
+
+/* 버튼, 링크에 마우스를 올렸을 때의 커서도 통일하고 싶다면 추가 */
+a, button {
+    cursor: pointer; /* 혹은 별도의 포인터용 svg 파일 경로 지정 */
+}
+
+/* =========================================
+   3. 상단 네비게이션 바 (공통)
+   ========================================= */
+nav { 
+    background-color: #0b051a; 
+    padding: 20px; 
+    text-align: center; 
+    border-bottom: 1px solid #333; 
+}
+
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-weight: bold; 
+    transition: color 0.3s ease; 
+}
+
+nav a:hover { 
+    color: #00ffcc; 
+}
+
+/* =========================================
+   4. 하단 푸터 (공통)
+   ========================================= */
+.main-footer {
+    background-color: #0b051a;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.social-links { margin: 20px 0; }
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #1a1a2e;
+    color: #00ffcc;
+    border-radius: 50%;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.social-icon:hover {
+    background-color: #00ffcc;
+    color: #0b051a;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+}
+
+.footer-text { color: #888; font-size: 14px; line-height: 1.8; }
+
+/* =========================================
+   5. 모바일 반응형 (공통 네비게이션)
+   ========================================= */
+@media (max-width: 768px) {
+    nav { padding: 10px; }
+    nav a { display: block; margin: 15px 0; font-size: 18px; }
+}

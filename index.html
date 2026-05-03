@@ -5,27 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - 제 5세대</title>
     
-    <!-- 1. 외부 아이콘 연결 -->
+    <!-- 1. 외부 아이콘 연결 (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <!-- 2. 스타일시트 연결 -->
     <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
 
+    <!-- 네비게이션 바 -->
     <nav>
-        <a href="home.html" style="color: #00ffcc;">Home</a>
+        <!-- 기존 home.html을 현재 파일명인 index.html로 수정 -->
+        <a href="index.html" style="color: #00ffcc;">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="activity.html">Activity</a>   
         <a href="members.html">Members</a> 
     </nav>
 
+    <!-- 메인 히어로 섹션 -->
     <section class="section-hero">
-        <h3 style="color: #00ffcc;">건국대학교 글로컬캠퍼스</h3>
-        <h1 style="font-size: 3.5rem; margin-bottom: 10px;">제 5세대</h1>
-        <p style="font-size: 1.2rem; color: #ccc;">함께 코딩하고, 함께 성장하는 공간.</p>
+        <h3 style="color: #00ffcc; margin-bottom: 10px;">건국대학교 글로컬캠퍼스</h3>
+        <h1 style="font-size: 3.5rem; margin-bottom: 20px; margin-top: 0;">제 5세대</h1>
+        <p style="font-size: 1.2rem; color: #ccc; margin-bottom: 30px;">함께 코딩하고, 함께 성장하는 공간.</p>
+        
+        <!-- CSS에 정의된 btn-apply 클래스를 활용한 버튼 추가 -->
+        <a href="about.html" class="btn-apply">동아리 알아보기</a>
     </section>
 
+    <!-- 푸터(하단) 섹션 -->
     <footer class="main-footer">
         <h3 style="color: white; margin-bottom: 5px;">&lt;/&gt; 제 5세대</h3>
         <p style="color: #666; margin-bottom: 25px;">New Generation of Coding Passion</p>

@@ -1,101 +1,33 @@
-/* 공통 설정 */
-body { 
-margin: 0; 
-font-family: 'Malgun Gothic', sans-serif; 
-background-color: #0b051a; 
-color: white; 
-}
-
-/* 네비게이션 바 */
-nav { 
-background-color: #0b051a; 
-padding: 20px; 
-text-align: center; 
-border-bottom: 1px solid #333; 
-}
-nav a { 
-color: white; 
-text-decoration: none; 
-margin: 0 15px; 
-font-weight: bold; 
-}
-nav a:hover { 
-color: #00ffcc; 
-}
-
 /* 메인 히어로 섹션 */
 .section-hero {
-min-height: 80vh; 
-display: flex;
-flex-direction: column;
-justify-content: center; 
-align-items: center;
-padding: 150px 20px; 
-text-align: center; 
+    min-height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 100px 20px; 
+    text-align: center; 
 }
+
+/* 메인 버튼 디자인 */
 .btn-apply { 
-background-color: #00ffcc; 
-color: #000; 
-padding: 15px 30px; 
-text-decoration: none; 
-font-weight: bold; 
-border-radius: 5px; 
-display: inline-block; 
-margin-top: 20px; 
+    background-color: #00ffcc; 
+    color: #0b051a; 
+    padding: 15px 30px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 8px; 
+    display: inline-block; 
+    transition: all 0.3s ease;
 }
 
-/* 푸터 디자인 */
-.main-footer {
-background-color: #0b051a;
-padding: 50px 20px;
-text-align: center;
-border-top: 1px solid #333;
-}
-.social-links {
-margin: 20px 0;
-}
-.social-icon {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-width: 45px;
-height: 45px;
-background-color: #1a1a2e;
-color: #00ffcc;
-border-radius: 50%;
-margin: 0 10px;
-font-size: 20px;
-text-decoration: none;
-transition: 0.3s;
-border: 1px solid #333;
-}
-.social-icon:hover {
-background-color: #00ffcc;
-color: #000;
-transform: translateY(-5px);
-box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-}
-.footer-text {
-color: #888;
-font-size: 14px;
-line-height: 1.8;
+.btn-apply:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3); 
 }
 
-/* 📱 모바일 반응형 웹 설정 */
+/* 모바일 설정 */
 @media (max-width: 768px) {
-    nav { padding: 10px; }
-        nav a {
-        display: block;
-        margin: 15px 0;
-        font-size: 18px;
-    }
-    .section-hero { padding: 100px 20px; }
-    .section-hero h1 {
-    font-size: 2.5rem !important;
-    }
-    .card, .project-card {
-    width: 100% !important;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    }
+    .section-hero { padding: 60px 20px; min-height: auto; }
+    .section-hero h1 { font-size: 2.5rem !important; }
 }

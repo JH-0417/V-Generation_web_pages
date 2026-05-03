@@ -1,0 +1,40 @@
+.members-container { padding: 100px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.member-card {
+    background-color: #161625; padding: 40px 30px; border-radius: 20px;
+    border: 1px solid #333; transition: all 0.3s ease; text-align: center;
+}
+
+.member-card:hover {
+    border-color: #00ffcc; transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.15);
+}
+
+.profile-img-placeholder {
+    width: 100px; height: 100px; background-color: #1a1a2e;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px auto; font-size: 40px; color: #00ffcc;
+    border: 2px solid #333; transition: all 0.3s ease;
+}
+
+.member-card:hover .profile-img-placeholder {
+    border-color: #00ffcc; box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+}
+
+.tech-stack { margin: 20px 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.badge { background-color: rgba(0, 255, 204, 0.1); color: #00ffcc; padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: bold; border: 1px solid #00ffcc; }
+
+.member-links a { display: inline-block; color: #aaa; font-size: 24px; margin: 0 10px; transition: all 0.3s ease; }
+.member-links a:hover { color: #00ffcc; transform: scale(1.2); }
+
+@media (max-width: 768px) {
+    .members-container { padding: 60px 20px; }
+    h2 { font-size: 2rem !important; }
+}

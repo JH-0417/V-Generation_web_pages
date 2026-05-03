@@ -1,41 +1,20 @@
- body { margin: 0; font-family: 'Malgun Gothic', sans-serif; background-color: #f8f9fa; color: #333; }
-        
-/* 네비게이션 바 */
-nav { background-color: #0b051a; padding: 20px; text-align: center; }
-nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-nav a:hover { color: #00ffcc; }
-
-/* 섹션 디자인 */
+.section-hero { text-align: center; padding: 100px 20px; }
 .section-features { padding: 80px 20px; text-align: center; }
 
-/* 카드 배치 마법 (Flexbox) */
 .card-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
-.card { background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 250px; }
-.card h3 { color: #00ffcc; font-size: 24px; margin-top: 0; }
-/* 📱 모바일 반응형 웹 설정 (화면 너비가 768px 이하일 때만 작동) */
-@media (max-width: 768px) {
-    /* 1. 네비게이션 메뉴를 세로로 배치 */
-    nav {
-        padding: 10px;
-    }
-    nav a {
-        display: block; /* 가로 배치를 세로 배치로 변경 */
-        margin: 15px 0; /* 위아래 간격 추가 */
-        font-size: 18px;
-    }
-    
-    /* 2. 메인 화면(Home) 글씨 크기 줄이기 */
-    .section-hero {
-        padding: 100px 20px;
-    }
-    .section-hero h1 {
-        font-size: 2.5rem !important; /* 모바일에서는 글씨를 조금 작게 */
-    }
 
-    /* 3. 카드(About)와 프로젝트(Projects) 박스를 화면에 꽉 차게 변경 */
-    .card, .project-card {
-        width: 100% !important; /* 박스 너비를 스마트폰 화면 너비에 맞춤 */
-        box-sizing: border-box; /* 여백이 화면을 뚫고 나가지 않게 방지 */
-        margin-bottom: 20px;
-    }
+.card {
+    background-color: #1a1625;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.card h3 { color: #00ffcc; font-size: 24px; margin-top: 0; }
+
+@media (max-width: 768px) {
+    .section-hero { padding: 100px 20px; }
+    .section-hero h1 { font-size: 2.5rem !important; }
+    .card { width: 100% !important; box-sizing: border-box; margin-bottom: 20px; }
 }
