@@ -1,0 +1,254 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members - 제 5세대</title>
+    <meta name="description" content="제 5세대를 이끌어가는 열정 가득한 개발자들을 소개합니다.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./about_files/index-CpO5xhiQ.css">
+    <link rel="stylesheet" href="./goons-style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="noise-overlay">
+    <!-- Page Transition -->
+    <div class="page-transition"><div class="transition-text"></div></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <div id="root">
+        <div class="min-h-screen bg-white">
+            <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-gray-100">
+                <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                    <a class="flex items-center gap-2 cursor-pointer" href="index.html">
+                        <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                        <span class="font-bold text-lg tracking-tight transition-colors duration-300 text-gray-900" style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
+                    </a>
+                    <ul class="hidden md:flex items-center gap-1">
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="index.html">Home</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="about.html">About</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="projects.html">Projects</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="events.html">Events</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap bg-[#00E87A] text-black" href="members.html">Members</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-colors cursor-pointer text-gray-900 hover:bg-gray-100" aria-label="메뉴 열기">
+                        <i class="text-xl ri-menu-line"></i>
+                    </button>
+                </nav>
+            </header>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl transition-all duration-300 translate-x-full hidden">
+                <div class="flex flex-col h-full p-6">
+                    <div class="flex items-center justify-between mb-12">
+                        <div class="flex items-center gap-2">
+                            <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                            <span class="font-bold text-lg text-gray-900" style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
+                        </div>
+                        <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-900 hover:bg-gray-100">
+                            <i class="text-2xl ri-close-line"></i>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col gap-6">
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="index.html">Home</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="about.html">About</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="projects.html">Projects</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="events.html">Events</a></li>
+                        <li><a class="text-2xl font-bold text-[#00E87A]" href="members.html">Members</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="mt-auto pt-10 border-t border-gray-100">
+                        <p class="text-gray-400 text-sm">건국대학교 글로컬캠퍼스 IT 동아리</p>
+                    </div>
+                </div>
+            </div>
+
+            <main>
+                <section class="pt-32 pb-16 bg-[#F0F4F0]">
+                    <div class="max-w-7xl mx-auto px-6 text-center">
+                        <span class="text-[#00C060] text-sm font-semibold uppercase tracking-widest reveal-fade">Our Team</span>
+                        <h1 class="text-gray-900 font-black mt-3 leading-tight reveal-chars" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 10vw, 72px);">멤버 소개</h1>
+                        <p class="text-gray-500 text-sm sm:text-base mt-4 max-w-xl mx-auto leading-relaxed px-4 sm:px-0 reveal-fade">제 5세대를 이끌어가는 열정 가득한 개발자들을 소개합니다.</p>
+                    </div>
+                </section>
+
+
+
+                <section class="py-20 bg-white">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <h2 class="text-gray-900 font-bold text-3xl mb-10 section-reveal" style="font-family: &quot;Space Grotesk&quot;, sans-serif; font-size: 2rem;">임원진</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 stagger-children">
+                            <!-- Member 1: 김준서 -->
+                            <div class="bg-[#F8FAF8] rounded-3xl overflow-hidden border border-gray-100/50 shadow-sm hover:shadow-md transition-all duration-300 group tilt-card glow-card">
+                                <div class="relative aspect-square overflow-hidden bg-gray-100 img-reveal">
+                                    <img src="members_assets/kim_junseo.jpeg" alt="김준서" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                                </div>
+                                <div class="p-6">
+                                    <span class="text-[#00C060] text-xs font-semibold uppercase tracking-wider">회장</span>
+                                    <h3 class="text-gray-900 font-bold text-xl mt-1">김준서</h3>
+                                    <p class="text-gray-400 text-xs mt-1">컴퓨터공학과 · 21학번</p>
+                                    <div class="mt-5">
+                                        <a href="https://github.com/" target="_blank" rel="nofollow noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200/60 text-gray-500 hover:bg-[#00E87A] hover:text-black transition-colors duration-300 cursor-pointer">
+                                            <i class="ri-github-line text-sm"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 2: 유수민 -->
+                            <div class="bg-[#F8FAF8] rounded-3xl overflow-hidden border border-gray-100/50 shadow-sm hover:shadow-md transition-all duration-300 group tilt-card glow-card">
+                                <div class="relative aspect-square overflow-hidden bg-gray-100 img-reveal">
+                                    <img src="members_assets/yoo_sumin.jpeg" alt="유수민" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                                </div>
+                                <div class="p-6">
+                                    <span class="text-[#00C060] text-xs font-semibold uppercase tracking-wider">부회장</span>
+                                    <h3 class="text-gray-900 font-bold text-xl mt-1">유수민</h3>
+                                    <p class="text-gray-400 text-xs mt-1">컴퓨터공학과 · 25학번</p>
+                                    <div class="mt-5">
+                                        <a href="https://github.com/" target="_blank" rel="nofollow noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200/60 text-gray-500 hover:bg-[#00E87A] hover:text-black transition-colors duration-300 cursor-pointer">
+                                            <i class="ri-github-line text-sm"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 3: 정경호 -->
+                            <div class="bg-[#F8FAF8] rounded-3xl overflow-hidden border border-gray-100/50 shadow-sm hover:shadow-md transition-all duration-300 group tilt-card glow-card">
+                                <div class="relative aspect-square overflow-hidden bg-gray-100 img-reveal">
+                                    <img src="members_assets/Jung.jpeg" alt="정경호" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                                </div>
+                                <div class="p-6">
+                                    <span class="text-[#00C060] text-xs font-semibold uppercase tracking-wider">총무</span>
+                                    <h3 class="text-gray-900 font-bold text-xl mt-1">정경호</h3>
+                                    <p class="text-gray-400 text-xs mt-1">메카트로닉스 · 21학번</p>
+                                    <div class="mt-5">
+                                        <a href="https://github.com/" target="_blank" rel="nofollow noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200/60 text-gray-500 hover:bg-[#00E87A] hover:text-black transition-colors duration-300 cursor-pointer">
+                                            <i class="ri-github-line text-sm"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 4: 박하늘 -->
+                            <div class="bg-[#F8FAF8] rounded-3xl overflow-hidden border border-gray-100/50 shadow-sm hover:shadow-md transition-all duration-300 group tilt-card glow-card">
+                                <div class="relative aspect-square overflow-hidden bg-gray-100 img-reveal">
+                                    <img src="members_assets/Park.jpeg" alt="박하늘" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                                </div>
+                                <div class="p-6">
+                                    <span class="text-[#00C060] text-xs font-semibold uppercase tracking-wider">임원</span>
+                                    <h3 class="text-gray-900 font-bold text-xl mt-1">박하늘</h3>
+                                    <p class="text-gray-400 text-xs mt-1">컴퓨터공학과 · 20학번</p>
+                                    <div class="mt-5">
+                                        <a href="https://github.com/" target="_blank" rel="nofollow noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200/60 text-gray-500 hover:bg-[#00E87A] hover:text-black transition-colors duration-300 cursor-pointer">
+                                            <i class="ri-github-line text-sm"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 5: 김기원 -->
+                            <div class="bg-[#F8FAF8] rounded-3xl overflow-hidden border border-gray-100/50 shadow-sm hover:shadow-md transition-all duration-300 group tilt-card glow-card">
+                                <div class="relative aspect-square overflow-hidden bg-gray-100 img-reveal">
+                                    <img src="members_assets/Kim.jpeg" alt="김기원" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                                </div>
+                                <div class="p-6">
+                                    <span class="text-[#00C060] text-xs font-semibold uppercase tracking-wider">임원</span>
+                                    <h3 class="text-gray-900 font-bold text-xl mt-1">김기원</h3>
+                                    <p class="text-gray-400 text-xs mt-1">컴퓨터공학과 · 24학번</p>
+                                    <div class="mt-5">
+                                        <a href="https://github.com/" target="_blank" rel="nofollow noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200/60 text-gray-500 hover:bg-[#00E87A] hover:text-black transition-colors duration-300 cursor-pointer">
+                                            <i class="ri-github-line text-sm"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="bg-[#F0F4F0] mt-0">
+                <div class="max-w-7xl mx-auto px-6 pt-16 pb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+                        <div class="md:col-span-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                                <span class="font-bold text-xl text-gray-900" style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed mb-4">건국대학교 글로컬캠퍼스<br>IT 동아리</p>
+                            <div class="flex items-center gap-3">
+                                <a href="https://github.com/" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors"><i class="ri-github-line text-base"></i></a>
+                                <a href="https://instagram.com/" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors"><i class="ri-instagram-line text-base"></i></a>
+                                <a href="https://youtube.com/" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors"><i class="ri-youtube-line text-base"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="index.html">Home</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="about.html">About</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="projects.html">Projects</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="events.html">Events</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="members.html">Members</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">Contact</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2 text-sm text-gray-500">
+                                    <div class="w-4 h-4 flex items-center justify-center mt-0.5"><i class="ri-map-pin-line text-[#00E87A]"></i></div>
+                                    <span>충청북도 충주시 충원대로 268<br>건국대학교 글로컬캠퍼스 학생회관 423호</span>
+                                </li>
+                                <li class="flex items-center gap-2 text-sm text-gray-500">
+                                    <div class="w-4 h-4 flex items-center justify-center"><i class="ri-mail-line text-[#00E87A]"></i></div>
+                                    <span>회장 이메일: joonseonim@naver.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <p class="text-xs text-gray-400">© 2026 제 5세대 - 건국대학교 글로컬캠퍼스 IT 동아리. All rights reserved.</p>
+                        <div class="flex flex-col items-center sm:items-end gap-0.5">
+                            <p class="text-xs text-gray-400">Made with <strong class="text-[#00E87A]">❤</strong> by 5th Generation</p>
+                            <p class="text-[10px] text-gray-400/80 font-light">Created by 팀 류종걸, 박하원, 박윤승</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu && mobileMenuClose) {
+            const toggleMenu = (show) => {
+                if (show) {
+                    mobileMenu.classList.remove('hidden');
+                    setTimeout(() => mobileMenu.classList.remove('translate-x-full'), 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                    document.body.style.overflow = '';
+                }
+            };
+
+            mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+            mobileMenuClose.addEventListener('click', () => toggleMenu(false));
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+        }
+    </script>
+    <script src="./goons-interactions.js"></script>
+</body>
+</html>

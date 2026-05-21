@@ -1,0 +1,306 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - 제 5세대</title>
+    <meta name="description" content="제 5세대의 스터디, 해커톤, 특강, MT 등 다양한 이벤트와 활동을 확인하세요.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./events_assets/index-CpO5xhiQ.css">
+    <link rel="stylesheet" href="./goons-style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="noise-overlay">
+    <!-- Page Transition -->
+    <div class="page-transition"><div class="transition-text"></div></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <div id="root">
+        <div class="min-h-screen bg-white">
+            <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-gray-100">
+                <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                    <a class="flex items-center gap-2 cursor-pointer" href="index.html">
+                        <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                        <span class="font-bold text-lg tracking-tight transition-colors duration-300 text-gray-900" style="font-family: &quot;Space Grotesk&quot;, sans-serif;">제 5세대</span>
+                    </a>
+                    <ul class="hidden md:flex items-center gap-1">
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="index.html">Home</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="about.html">About</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="projects.html">Projects</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap bg-[#00E87A] text-black" href="events.html">Events</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="members.html">Members</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-colors cursor-pointer text-gray-900 hover:bg-gray-100" aria-label="메뉴 열기">
+                        <i class="text-xl ri-menu-line"></i>
+                    </button>
+                </nav>
+            </header>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl transition-all duration-300 translate-x-full hidden">
+                <div class="flex flex-col h-full p-6">
+                    <div class="flex items-center justify-between mb-12">
+                        <div class="flex items-center gap-2">
+                            <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                            <span class="font-bold text-lg text-gray-900" style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
+                        </div>
+                        <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-900 hover:bg-gray-100">
+                            <i class="text-2xl ri-close-line"></i>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col gap-6">
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="index.html">Home</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="about.html">About</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="projects.html">Projects</a></li>
+                        <li><a class="text-2xl font-bold text-[#00E87A]" href="events.html">Events</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="members.html">Members</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="mt-auto pt-10 border-t border-gray-100">
+                        <p class="text-gray-400 text-sm">건국대학교 글로컬캠퍼스 IT 동아리</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="pt-32 pb-16 bg-[#F0F4F0]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <span class="text-[#00C060] text-sm font-semibold uppercase tracking-widest reveal-fade">Events</span>
+                    <h1 class="text-gray-900 font-black mt-3 leading-tight reveal-chars" style="font-family: &quot;Space Grotesk&quot;, sans-serif; font-size: clamp(32px, 10vw, 72px);">이벤트 &amp; 활동</h1>
+                    <p class="text-gray-500 text-sm sm:text-base mt-4 max-w-xl leading-relaxed reveal-fade">스터디, 해커톤, 특강 등 다양한 활동에 참여하세요.</p>
+                </div>
+            </section>
+
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <h2 class="text-gray-900 font-black text-2xl md:text-3xl mb-8 section-reveal" style="font-family: &quot;Space Grotesk&quot;, sans-serif;">예정된 이벤트</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-children">
+                        <div class="group bg-[#F8FAF8] rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 cursor-default tilt-card glow-card">
+                            <div class="relative aspect-[3/2] md:aspect-[16/10] overflow-hidden img-reveal">
+                                <img alt="월간 프로젝트 발표회" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=600">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                <span class="absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full bg-[#00E87A] text-black">정기 발표</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="flex items-center gap-1.5 text-[#00C060] text-sm font-semibold">
+                                        <div class="w-4 h-4 flex items-center justify-center"><i class="ri-calendar-line"></i></div>매월 마지막 주 수요일
+                                    </div>
+                                    <div class="flex items-center gap-1.5 text-gray-400 text-sm">
+                                        <div class="w-4 h-4 flex items-center justify-center"><i class="ri-time-line"></i></div>19:00
+                                    </div>
+                                </div>
+                                <h3 class="text-gray-900 font-bold text-lg mb-2">월간 프로젝트 발표회</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-3">한 달 동안 진행된 프로젝트의 결과물을 공유하고 피드백을 주고받는 시간입니다. 발표 후 정기 회식이 이어집니다.</p>
+                                <div class="flex items-center gap-1.5 text-gray-400 text-xs">
+                                    <div class="w-4 h-4 flex items-center justify-center"><i class="ri-map-pin-line"></i></div>건국대 글로컬캠퍼스 공학관 세미나실
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group bg-[#F8FAF8] rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 cursor-default tilt-card glow-card">
+                            <div class="relative aspect-[3/2] md:aspect-[16/10] overflow-hidden img-reveal">
+                                <img alt="제 5세대 정기 MT" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="events_assets/MT.jpeg">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                <span class="absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full bg-amber-400 text-black">엠티</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="flex items-center gap-1.5 text-[#00C060] text-sm font-semibold">
+                                        <div class="w-4 h-4 flex items-center justify-center"><i class="ri-calendar-line"></i></div>학기 중 (별도 공지)
+                                    </div>
+                                    <div class="flex items-center gap-1.5 text-gray-400 text-sm">
+                                        <div class="w-4 h-4 flex items-center justify-center"><i class="ri-time-line"></i></div>1박 2일
+                                    </div>
+                                </div>
+                                <h3 class="text-gray-900 font-bold text-lg mb-2">제 5세대 정기 MT</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-3">부원들 간의 화합과 즐거운 추억을 쌓기 위한 1박 2일 MT 행사입니다.</p>
+                                <div class="flex items-center gap-1.5 text-gray-400 text-xs">
+                                    <div class="w-4 h-4 flex items-center justify-center"><i class="ri-map-pin-line"></i></div>추후 공지
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group bg-[#F8FAF8] rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 cursor-default tilt-card glow-card">
+                            <div class="relative aspect-[3/2] md:aspect-[16/10] overflow-hidden img-reveal">
+                                <img alt="스터디 활동" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="events_assets/regular_activity.jpeg">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                <span class="absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full bg-rose-400 text-white">스터디</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="flex items-center gap-1.5 text-[#00C060] text-sm font-semibold">
+                                        <div class="w-4 h-4 flex items-center justify-center"><i class="ri-calendar-line"></i></div>매주 1회
+                                    </div>
+                                    <div class="flex items-center gap-1.5 text-gray-400 text-sm">
+                                        <div class="w-4 h-4 flex items-center justify-center"><i class="ri-time-line"></i></div>약 1시간
+                                    </div>
+                                </div>
+                                <h3 class="text-gray-900 font-bold text-lg mb-2">정기 스터디 활동</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-3">C, 파이썬, 게임 개발 기초 등 다양한 프로그래밍 언어와 기술을 함께 학습합니다.</p>
+                                <div class="flex items-center gap-1.5 text-gray-400 text-xs">
+                                    <div class="w-4 h-4 flex items-center justify-center"><i class="ri-map-pin-line"></i></div>건국대 글로컬캠퍼스 강의실
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group bg-[#F8FAF8] rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 cursor-default tilt-card glow-card">
+                            <div class="relative aspect-[3/2] md:aspect-[16/10] overflow-hidden img-reveal">
+                                <img alt="축제 모람제 참가" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="events_assets/moram_festival.jpeg">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                <span class="absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full bg-sky-400 text-white">축제</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="flex items-center gap-1.5 text-[#00C060] text-sm font-semibold">
+                                        <div class="w-4 h-4 flex items-center justify-center"><i class="ri-calendar-line"></i></div>학교 축제 기간
+                                    </div>
+                                </div>
+                                <h3 class="text-gray-900 font-bold text-lg mb-2">모람제 활동</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-3">학교 축제 모람제에서 음식 판매 및 동아리 제작 게임 시연회를 진행합니다.</p>
+                                <div class="flex items-center gap-1.5 text-gray-400 text-xs">
+                                    <div class="w-4 h-4 flex items-center justify-center"><i class="ri-map-pin-line"></i></div>교내 행사장
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-[#0A0E1A]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <h2 class="text-white font-black text-2xl md:text-3xl mb-8 section-reveal" style="font-family: &quot;Space Grotesk&quot;, sans-serif;">지난 이벤트</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger-children">
+                        <div class="group relative rounded-2xl overflow-hidden cursor-default img-reveal">
+                            <img alt="4기 졸업 파티" class="w-full aspect-[3/2] object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=400">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-5">
+                                <h3 class="text-white font-bold text-base">4기 졸업 파티</h3>
+                                <p class="text-white/50 text-xs mt-1">2025-12-15</p>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden cursor-default img-reveal">
+                            <img alt="교내 해커톤 우승" class="w-full aspect-[3/2] object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-5">
+                                <h3 class="text-white font-bold text-base">교내 해커톤 우승</h3>
+                                <p class="text-white/50 text-xs mt-1">2025-11-08</p>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden cursor-default img-reveal">
+                            <img alt="오픈소스 기여 워크샵" class="w-full aspect-[3/2] object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1515378717721-c9662f5d758a?auto=format&fit=crop&q=80&w=400">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-5">
+                                <h3 class="text-white font-bold text-base">오픈소스 기여 워크샵</h3>
+                                <p class="text-white/50 text-xs mt-1">2025-10-22</p>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden cursor-default img-reveal">
+                            <img alt="여름 코딩 캠프" class="w-full aspect-[3/2] object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=400">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-5">
+                                <h3 class="text-white font-bold text-base">여름 코딩 캠프</h3>
+                                <p class="text-white/50 text-xs mt-1">2025-08-05</p>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden cursor-default img-reveal">
+                            <img alt="취업 준비 세미나" class="w-full aspect-[3/2] object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=400">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-5">
+                                <h3 class="text-white font-bold text-base">취업 준비 세미나</h3>
+                                <p class="text-white/50 text-xs mt-1">2025-07-18</p>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden cursor-default img-reveal">
+                            <img alt="4기 신입 OT" class="w-full aspect-[3/2] object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1523240715639-99a8088fb40a?auto=format&fit=crop&q=80&w=400">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-5">
+                                <h3 class="text-white font-bold text-base">4기 신입 OT</h3>
+                                <p class="text-white/50 text-xs mt-1">2025-03-12</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-[#F0F4F0] mt-0">
+                <div class="max-w-7xl mx-auto px-6 pt-16 pb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+                        <div class="md:col-span-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                                <span class="font-bold text-xl text-gray-900" style="font-family: &quot;Space Grotesk&quot;, sans-serif;">제 5세대</span>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed mb-4">건국대학교 글로컬캠퍼스<br>IT 동아리</p>
+                            <div class="flex items-center gap-3">
+                                <a href="https://github.com/" target="_blank" rel="nofollow noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors cursor-pointer"><i class="ri-github-line text-base"></i></a>
+                                <a href="https://instagram.com/" target="_blank" rel="nofollow noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors cursor-pointer"><i class="ri-instagram-line text-base"></i></a>
+                                <a href="https://youtube.com/" target="_blank" rel="nofollow noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors cursor-pointer"><i class="ri-youtube-line text-base"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover" href="index.html">Home</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover" href="about.html">About</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover" href="projects.html">Projects</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover" href="events.html">Events</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover" href="members.html">Members</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover" href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">Contact</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2 text-sm text-gray-500">
+                                    <div class="w-4 h-4 flex items-center justify-center mt-0.5"><i class="ri-map-pin-line text-[#00E87A]"></i></div>
+                                    <span>충청북도 충주시 충원대로 268<br>건국대학교 글로컬캠퍼스 학생회관 423호</span>
+                                </li>
+                                <li class="flex items-center gap-2 text-sm text-gray-500">
+                                    <div class="w-4 h-4 flex items-center justify-center"><i class="ri-mail-line text-[#00E87A]"></i></div>
+                                    <span>회장 이메일: joonseonim@naver.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <p class="text-xs text-gray-400">© 2026 제 5세대 - 건국대학교 글로컬캠퍼스 IT 동아리. All rights reserved.</p>
+                        <div class="flex flex-col items-center sm:items-end gap-0.5">
+                            <p class="text-xs text-gray-400">Made with <strong class="text-[#00E87A]">❤</strong> by 5th Generation</p>
+                            <p class="text-[10px] text-gray-400/80 font-light">Created by 팀 류종걸, 박하원, 박윤승</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu && mobileMenuClose) {
+            const toggleMenu = (show) => {
+                if (show) {
+                    mobileMenu.classList.remove('hidden');
+                    setTimeout(() => mobileMenu.classList.remove('translate-x-full'), 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                    document.body.style.overflow = '';
+                }
+            };
+
+            mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+            mobileMenuClose.addEventListener('click', () => toggleMenu(false));
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+        }
+    </script>
+    <script src="./goons-interactions.js"></script>
+</body></html>

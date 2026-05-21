@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제 5세대 - 건국대학교 글로컬캠퍼스 IT 동아리</title>
+    <meta name="description" content="건국대학교 글로컬캠퍼스 중앙동아리 창업학술분과 IT 동아리 제 5세대. 함께 코딩하고 함께 성장하는 공간.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./home_assets/index-CpO5xhiQ.css">
+    <link rel="stylesheet" href="./goons-style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="noise-overlay">
+    <!-- Page Transition -->
+    <div class="page-transition"><div class="transition-text"></div></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <div id="root">
+        <div class="min-h-screen">
+            <header
+                class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black/20 backdrop-blur-md border-b border-white/10">
+                <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                    <a class="flex items-center gap-2 cursor-pointer" href="index.html">
+                        <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                        <span class="font-bold text-lg tracking-tight transition-colors duration-300 text-white"
+                            style="font-family: &quot;Space Grotesk&quot;, sans-serif;">제 5세대</span>
+                    </a>
+                    <ul class="hidden md:flex items-center gap-1">
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap bg-[#00E87A] text-black"
+                                href="index.html">Home</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
+                                href="about.html">About</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
+                                href="projects.html">Projects</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
+                                href="events.html">Events</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
+                                href="members.html">Members</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
+                                href="contact.html">Contact</a></li>
+                    </ul>
+                    <button id="mobile-menu-btn"
+                        class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-colors cursor-pointer text-white hover:bg-white/10"
+                        aria-label="메뉴 열기">
+                        <i class="text-xl ri-menu-line"></i>
+                    </button>
+                </nav>
+            </header>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu"
+                class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl transition-all duration-300 translate-x-full hidden">
+                <div class="flex flex-col h-full p-6">
+                    <div class="flex items-center justify-between mb-12">
+                        <div class="flex items-center gap-2">
+                            <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                            <span class="font-bold text-lg text-white"
+                                style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
+                        </div>
+                        <button id="mobile-menu-close"
+                            class="w-10 h-10 flex items-center justify-center rounded-lg text-white hover:bg-white/10">
+                            <i class="text-2xl ri-close-line"></i>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col gap-6">
+                        <li><a class="text-2xl font-bold text-[#00E87A]" href="index.html">Home</a></li>
+                        <li><a class="text-2xl font-bold text-white/70 hover:text-white" href="about.html">About</a>
+                        </li>
+                        <li><a class="text-2xl font-bold text-white/70 hover:text-white"
+                                href="projects.html">Projects</a></li>
+                        <li><a class="text-2xl font-bold text-white/70 hover:text-white" href="events.html">Events</a>
+                        </li>
+                        <li><a class="text-2xl font-bold text-white/70 hover:text-white" href="members.html">Members</a>
+                        </li>
+                        <li><a class="text-2xl font-bold text-white/70 hover:text-white" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="mt-auto pt-10 border-t border-white/10">
+                        <p class="text-white/40 text-sm">건국대학교 글로컬캠퍼스 IT 동아리</p>
+                    </div>
+                </div>
+            </div>
+
+            <main>
+                <!-- HERO SECTION -->
+                <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 parallax-container">
+                        <img alt="제 5세대 단체사진" class="w-full h-full object-cover object-top parallax-img" data-speed="0.08"
+                            src="home_assets/group_photo.jpeg">
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+                    </div>
+                    <div
+                        class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-20 pb-16 flex flex-col items-center text-center">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00E87A]/40 bg-[#00E87A]/10 mb-6 sm:mb-8 reveal-fade">
+                            <span class="w-2 h-2 rounded-full bg-[#00E87A] animate-pulse"></span>
+                            <span class="text-[#00E87A] text-[10px] sm:text-sm font-medium tracking-wide">중앙동아리 창업학술분과 |
+                                건국대학교 글로컬캠퍼스</span>
+                        </div>
+                        <h1 class="text-white font-black leading-tight mb-2 sm:mb-4 reveal-chars"
+                            style="font-family: &quot;Space Grotesk&quot;, sans-serif; font-size: clamp(48px, 15vw, 120px);">제 5세대</h1>
+                        <p class="text-white/60 font-light mb-6 reveal-fade"
+                            style="font-family: &quot;Space Grotesk&quot;, sans-serif; font-size: clamp(18px, 5vw, 36px);">
+                            Konkuk Univ. IT Club</p>
+                        <p class="text-white/70 text-sm sm:text-lg max-w-xl leading-relaxed mb-10 px-4 sm:px-0 reveal-fade">함께 코딩하고,
+                            함께 성장하는 공간.<br class="hidden sm:block">아이디어를 현실로 만드는 개발자들의 커뮤니티.</p>
+                        <div class="flex flex-col sm:flex-row items-center gap-4 reveal-fade">
+                            <a class="magnetic-btn px-8 py-3.5 bg-[#00E87A] text-black font-semibold rounded-full hover:bg-[#00C060] transition-all duration-200 whitespace-nowrap text-base press-effect"
+                                href="contact.html"><span class="btn-text">동아리 지원하기</span></a>
+                            <a class="magnetic-btn px-8 py-3.5 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all duration-200 whitespace-nowrap text-base press-effect"
+                                href="about.html"><span class="btn-text">더 알아보기</span></a>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+                        <div class="flex flex-col items-center gap-2 float-animation">
+                            <span class="text-white/40 text-xs">스크롤</span>
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-arrow-down-line text-white/40"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MARQUEE SECTION -->
+                <div class="marquee-section bg-[#F8FAF8] border-y border-gray-100">
+                    <div class="marquee-track">
+                        <span class="marquee-item"><span class="marquee-dot"></span>스터디 활동</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>소프트웨어 프로젝트</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>해커톤 참가</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>프로젝트 발표회</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>정기 모임 & 회식</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>MT & 축제</span>
+                        <!-- Duplicate for seamless loop -->
+                        <span class="marquee-item"><span class="marquee-dot"></span>스터디 활동</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>소프트웨어 프로젝트</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>해커톤 참가</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>프로젝트 발표회</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>정기 모임 & 회식</span>
+                        <span class="marquee-item"><span class="marquee-dot"></span>MT & 축제</span>
+                    </div>
+                </div>
+
+                <!-- WHAT WE DO SECTION -->
+                <section class="py-24 bg-[#F8FAF8]">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="mb-14 section-reveal">
+                            <span class="text-[#00C060] text-sm font-semibold uppercase tracking-widest">What We
+                                Do</span>
+                            <h2 class="text-gray-900 font-black mt-2 leading-tight reveal-text"
+                                style="font-family: &quot;Space Grotesk&quot;, sans-serif; font-size: clamp(36px, 5vw, 64px);">
+                                우리는 함께 성장합니다</h2>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+                            <div
+                                class="bg-white rounded-2xl p-7 hover:shadow-md transition-all duration-300 group cursor-default tilt-card">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#E8FFF3] mb-5 group-hover:bg-[#00E87A] transition-colors duration-300">
+                                    <i
+                                        class="ri-code-s-slash-line text-2xl text-[#00C060] group-hover:text-black transition-colors duration-300"></i>
+                                </div>
+                                <h3 class="text-gray-900 font-bold text-lg mb-2">스터디 활동</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">주 1회 약 1시간씩 진행되며 C, 파이썬, 게임 개발 기초를 함께
+                                    학습합니다.</p>
+                            </div>
+                            <div
+                                class="bg-white rounded-2xl p-7 hover:shadow-md transition-all duration-300 group cursor-default tilt-card">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#E8FFF3] mb-5 group-hover:bg-[#00E87A] transition-colors duration-300">
+                                    <i
+                                        class="ri-terminal-window-line text-2xl text-[#00C060] group-hover:text-black transition-colors duration-300"></i>
+                                </div>
+                                <h3 class="text-gray-900 font-bold text-lg mb-2">소프트웨어 프로젝트</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">웹 및 게임 프로그래밍 팀을 구성하여 실질적인 결과물을 만들어냅니다.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-white rounded-2xl p-7 hover:shadow-md transition-all duration-300 group cursor-default tilt-card">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#E8FFF3] mb-5 group-hover:bg-[#00E87A] transition-colors duration-300">
+                                    <i
+                                        class="ri-presentation-line text-2xl text-[#00C060] group-hover:text-black transition-colors duration-300"></i>
+                                </div>
+                                <h3 class="text-gray-900 font-bold text-lg mb-2">프로젝트 발표회</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">월 1회 정기적인 발표회를 통해 프로젝트 진행 사항을 공유하고 피드백을
+                                    나눕니다.</p>
+                            </div>
+                            <div
+                                class="bg-white rounded-2xl p-7 hover:shadow-md transition-all duration-300 group cursor-default tilt-card">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#E8FFF3] mb-5 group-hover:bg-[#00E87A] transition-colors duration-300">
+                                    <i
+                                        class="ri-restaurant-line text-2xl text-[#00C060] group-hover:text-black transition-colors duration-300"></i>
+                                </div>
+                                <h3 class="text-gray-900 font-bold text-lg mb-2">정기 모임 및 회식</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">발표회 후 정기 회식과 MT를 통해 부원들 간의 친목을 도모하고
+                                    유대감을 쌓습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MEMBER STORIES SECTION -->
+                <section class="py-24 bg-[#0A0E1A]">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="mb-14 text-center section-reveal">
+                            <span class="text-[#00E87A] text-sm font-semibold uppercase tracking-widest">Member
+                                Stories</span>
+                            <h2 class="text-white font-black mt-2 reveal-text"
+                                style="font-family: &quot;Space Grotesk&quot;, sans-serif; font-size: clamp(32px, 4vw, 52px);">
+                                동아리원들의 이야기</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
+                            <div
+                                class="rounded-2xl p-7 border border-white/10 bg-white/5 hover:border-[#00E87A]/40 transition-all duration-300 glow-card">
+                                <div class="flex items-center gap-3 mb-5">
+                                    <img alt="정현우" class="w-12 h-12 rounded-full object-cover object-top"
+                                        src="./home_assets/search-image(1)">
+                                    <div>
+                                        <div class="text-white font-semibold text-sm">정현우</div>
+                                        <div class="text-[#00E87A] text-xs">5기</div>
+                                    </div>
+                                </div>
+                                <p class="text-white/60 text-sm leading-relaxed">"동아리에 들어오고 나서 실제 프로젝트를 경험하면서 개발 실력이 엄청
+                                    늘었어요. 팀원들과 함께 밤새 코딩하던 기억이 정말 소중합니다."</p>
+                            </div>
+                            <div
+                                class="rounded-2xl p-7 border border-white/10 bg-white/5 hover:border-[#00E87A]/40 transition-all duration-300 glow-card">
+                                <div class="flex items-center gap-3 mb-5">
+                                    <img alt="한소희" class="w-12 h-12 rounded-full object-cover object-top"
+                                        src="./home_assets/search-image(2)">
+                                    <div>
+                                        <div class="text-white font-semibold text-sm">한소희</div>
+                                        <div class="text-[#00E87A] text-xs">5기</div>
+                                    </div>
+                                </div>
+                                <p class="text-white/60 text-sm leading-relaxed">"처음엔 코딩을 전혀 몰랐는데, 선배들이 친절하게 가르쳐줘서 지금은
+                                    풀스택 개발을 할 수 있게 됐어요!"</p>
+                            </div>
+                            <div
+                                class="rounded-2xl p-7 border border-white/10 bg-white/5 hover:border-[#00E87A]/40 transition-all duration-300 glow-card">
+                                <div class="flex items-center gap-3 mb-5">
+                                    <img alt="오승민" class="w-12 h-12 rounded-full object-cover object-top"
+                                        src="./home_assets/search-image(3)">
+                                    <div>
+                                        <div class="text-white font-semibold text-sm">오승민</div>
+                                        <div class="text-[#00E87A] text-xs">5기</div>
+                                    </div>
+                                </div>
+                                <p class="text-white/60 text-sm leading-relaxed">"해커톤에서 팀원들과 함께 수상했을 때 정말 뿌듯했어요. 제 5세대
+                                    최고!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA SECTION -->
+                <section class="py-24 bg-white">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="relative rounded-3xl overflow-hidden section-reveal img-reveal">
+                            <div class="parallax-container">
+                                <img alt="coding together" class="w-full h-[420px] md:h-[500px] object-cover object-top parallax-img" data-speed="0.06"
+                                    src="./home_assets/search-image(4)">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
+                            <div class="absolute inset-0 flex flex-col justify-center px-10 md:px-16">
+                                <span class="text-[#00E87A] text-sm font-semibold uppercase tracking-widest mb-4">Join
+                                    Us</span>
+                                <h2 class="text-white font-black leading-tight mb-6"
+                                    style="font-family: &quot;Space Grotesk&quot;, sans-serif; font-size: clamp(28px, 4vw, 52px);">
+                                    함께 코딩할<br>준비가 되셨나요?</h2>
+                                <p class="text-white/70 text-base mb-8 max-w-md leading-relaxed">제 5세대와 함께 성장하세요. 지금 바로
+                                    지원하고 우리의 여정에 합류하세요.</p>
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <a class="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 bg-[#00E87A] text-black font-semibold rounded-full hover:bg-[#00C060] transition-colors whitespace-nowrap w-fit press-effect"
+                                        href="contact.html">
+                                        <span class="btn-text inline-flex items-center gap-2">지원하기
+                                        <div class="w-4 h-4 flex items-center justify-center"><i
+                                                class="ri-arrow-right-line"></i></div></span>
+                                    </a>
+                                    <a class="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-colors whitespace-nowrap w-fit press-effect"
+                                        href="projects.html"><span class="btn-text">프로젝트 보기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="bg-[#F0F4F0] mt-0">
+                <div class="max-w-7xl mx-auto px-6 pt-16 pb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+                        <div class="md:col-span-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                                <span class="font-bold text-xl text-gray-900"
+                                    style="font-family: &quot;Space Grotesk&quot;, sans-serif;">제 5세대</span>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed mb-4">건국대학교 글로컬캠퍼스<br>IT 동아리</p>
+                            <div class="flex items-center gap-3">
+                                <a href="https://github.com/" target="_blank" rel="nofollow noopener noreferrer"
+                                    class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors cursor-pointer">
+                                    <i class="ri-github-line text-base"></i>
+                                </a>
+                                <a href="https://instagram.com/" target="_blank" rel="nofollow noopener noreferrer"
+                                    class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors cursor-pointer">
+                                    <i class="ri-instagram-line text-base"></i>
+                                </a>
+                                <a href="https://youtube.com/" target="_blank" rel="nofollow noopener noreferrer"
+                                    class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors cursor-pointer">
+                                    <i class="ri-youtube-line text-base"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">Quick Links
+                            </h4>
+                            <ul class="space-y-2">
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover"
+                                        href="index.html">Home</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover"
+                                        href="about.html">About</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover"
+                                        href="projects.html">Projects</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover"
+                                        href="events.html">Events</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover"
+                                        href="members.html">Members</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors cursor-pointer link-hover"
+                                        href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">Contact</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2 text-sm text-gray-500">
+                                    <div class="w-4 h-4 flex items-center justify-center mt-0.5"><i
+                                            class="ri-map-pin-line text-[#00E87A]"></i></div>
+                                    <span>충청북도 충주시 충원대로 268<br>건국대학교 글로컬캠퍼스 학생회관 423호</span>
+                                </li>
+                                <li class="flex items-center gap-2 text-sm text-gray-500">
+                                    <div class="w-4 h-4 flex items-center justify-center"><i
+                                            class="ri-mail-line text-[#00E87A]"></i></div>
+                                    <span>회장 이메일: joonseonim@naver.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <p class="text-xs text-gray-400">© 2026 제 5세대 - 건국대학교 글로컬캠퍼스 IT 동아리. All rights reserved.</p>
+                        <div class="flex flex-col items-center sm:items-end gap-0.5">
+                            <p class="text-xs text-gray-400">Made with <strong class="text-[#00E87A]">❤</strong> by 5th
+                                Generation</p>
+                            <p class="text-[10px] text-gray-400/80 font-light">Created by 팀 류종걸, 박하원, 박윤승</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu && mobileMenuClose) {
+            const toggleMenu = (show) => {
+                if (show) {
+                    mobileMenu.classList.remove('hidden');
+                    setTimeout(() => mobileMenu.classList.remove('translate-x-full'), 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                    document.body.style.overflow = '';
+                }
+            };
+
+            mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+            mobileMenuClose.addEventListener('click', () => toggleMenu(false));
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => toggleMenu(false));
+            });
+        }
+
+        // Scroll Reveal Animation (legacy - keep for backward compat)
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.grid').forEach(grid => {
+                const cards = grid.querySelectorAll('.scroll-reveal');
+                cards.forEach((card, index) => {
+                    card.style.transitionDelay = `${index * 150}ms`;
+                });
+            });
+
+            document.querySelectorAll('.scroll-reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+    <script src="./goons-interactions.js"></script>
+</body>
+
+</html>
