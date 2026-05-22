@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다목적 소프트웨어 – 제 5세대</title>
+    <meta name="description" content="제 5세대 소프트웨어 프로젝트 팀의 유틸리티·자동화 도구 개발 상세 소개">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="./events_assets/index-CpO5xhiQ.css">
+    <link rel="stylesheet" href="./goons-style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="noise-overlay">
+    <div class="page-transition"><div class="transition-text"></div></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <div id="root">
+        <div class="min-h-screen bg-white">
+            <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-gray-100">
+                <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                    <a class="flex items-center gap-2 cursor-pointer" href="index.html">
+                        <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                        <span class="font-bold text-lg tracking-tight text-gray-900" style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
+                    </a>
+                    <ul class="hidden md:flex items-center gap-1">
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="index.html">Home</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="about.html">About</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium bg-[#00E87A] text-black" href="projects.html">Projects</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="events.html">Events</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="members.html">Members</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg text-gray-900 hover:bg-gray-100" aria-label="메뉴 열기">
+                        <i class="text-xl ri-menu-line"></i>
+                    </button>
+                </nav>
+            </header>
+
+            <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl transition-all duration-300 translate-x-full hidden">
+                <div class="flex flex-col h-full p-6">
+                    <div class="flex items-center justify-between mb-12">
+                        <div class="flex items-center gap-2">
+                            <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                            <span class="font-bold text-lg text-gray-900" style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
+                        </div>
+                        <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-900 hover:bg-gray-100">
+                            <i class="text-2xl ri-close-line"></i>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col gap-6">
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="index.html">Home</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="about.html">About</a></li>
+                        <li><a class="text-2xl font-bold text-[#00E87A]" href="projects.html">Projects</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="events.html">Events</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="members.html">Members</a></li>
+                        <li><a class="text-2xl font-bold text-gray-400 hover:text-gray-900" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="mt-auto pt-10 border-t border-gray-100">
+                        <p class="text-gray-400 text-sm">건국대학교 글로컬캠퍼스 IT 동아리</p>
+                    </div>
+                </div>
+            </div>
+
+            <main>
+                <section class="pt-32 pb-12 bg-[#F0F4F0]">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6 reveal-fade">
+                            <a href="projects.html" class="hover:text-[#00C060] transition-colors link-hover">프로젝트</a>
+                            <i class="ri-arrow-right-s-line text-gray-400"></i>
+                            <span class="text-gray-900 font-medium">다목적 소프트웨어</span>
+                        </nav>
+                        <div class="flex flex-wrap gap-2 mb-4 reveal-fade">
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-[#E8FFF3] text-[#00C060]">Software</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-600">Python</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-gray-200 text-gray-600">진행 중</span>
+                        </div>
+                        <h1 class="text-gray-900 font-black leading-tight reveal-chars" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 8vw, 56px);">다목적 소프트웨어</h1>
+                        <p class="text-gray-500 text-sm sm:text-lg mt-4 max-w-2xl leading-relaxed reveal-fade">일상의 문제를 해결하기 위한 유틸리티와 자동화 도구를 개발하며, 팀 협업을 통해 프로젝트 관리 역량을 강화합니다.</p>
+                    </div>
+                </section>
+
+                <section class="pb-16 bg-white">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="rounded-2xl overflow-hidden img-reveal mb-16">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200" alt="다목적 소프트웨어" class="w-full aspect-[16/9] object-cover object-center">
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                            <div class="lg:col-span-2 space-y-10 section-reveal">
+                                <div>
+                                    <h2 class="text-gray-900 font-bold text-2xl mb-4" style="font-family: 'Space Grotesk', sans-serif;">프로젝트 소개</h2>
+                                    <p class="text-gray-600 leading-relaxed">소프트웨어 프로젝트 팀은 Python을 중심으로 데이터 처리, 자동화 스크립트, 간단한 데스크톱·CLI 도구를 만듭니다. 실생활과 학교 생활에서 겪는 불편을 기술로 해결하는 것을 목표로, 아이디어 선정부터 배포까지 단계별로 진행합니다.</p>
+                                </div>
+                                <div>
+                                    <h2 class="text-gray-900 font-bold text-2xl mb-4" style="font-family: 'Space Grotesk', sans-serif;">주요 활동</h2>
+                                    <ul class="space-y-3 text-gray-600">
+                                        <li class="flex items-start gap-3"><i class="ri-checkbox-circle-fill text-[#00E87A] mt-1"></i><span>문제 정의 및 요구사항 정리 워크숍</span></li>
+                                        <li class="flex items-start gap-3"><i class="ri-checkbox-circle-fill text-[#00E87A] mt-1"></i><span>Python 기초·라이브러리 스터디 (pandas, requests 등)</span></li>
+                                        <li class="flex items-start gap-3"><i class="ri-checkbox-circle-fill text-[#00E87A] mt-1"></i><span>팀별 MVP 개발 및 사용자 테스트</span></li>
+                                        <li class="flex items-start gap-3"><i class="ri-checkbox-circle-fill text-[#00E87A] mt-1"></i><span>GitHub 이슈·PR 기반 협업 및 문서화</span></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h2 class="text-gray-900 font-bold text-2xl mb-4" style="font-family: 'Space Grotesk', sans-serif;">개발 예시</h2>
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 stagger-children">
+                                        <div class="bg-[#F8FAF8] rounded-2xl p-5 tilt-card">
+                                            <i class="ri-file-list-3-line text-2xl text-[#00C060] mb-3"></i>
+                                            <h3 class="font-bold text-gray-900 text-sm">일정·과제 관리</h3>
+                                            <p class="text-gray-500 text-xs mt-2 leading-relaxed">학기 일정과 과제를 한눈에 보는 도구</p>
+                                        </div>
+                                        <div class="bg-[#F8FAF8] rounded-2xl p-5 tilt-card">
+                                            <i class="ri-bar-chart-box-line text-2xl text-[#00C060] mb-3"></i>
+                                            <h3 class="font-bold text-gray-900 text-sm">데이터 분석</h3>
+                                            <p class="text-gray-500 text-xs mt-2 leading-relaxed">동아리 활동 데이터 시각화</p>
+                                        </div>
+                                        <div class="bg-[#F8FAF8] rounded-2xl p-5 tilt-card">
+                                            <i class="ri-robot-2-line text-2xl text-[#00C060] mb-3"></i>
+                                            <h3 class="font-bold text-gray-900 text-sm">업무 자동화</h3>
+                                            <p class="text-gray-500 text-xs mt-2 leading-relaxed">반복 작업을 줄이는 스크립트</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <aside class="lg:col-span-1 reveal-fade">
+                                <div class="bg-[#F8FAF8] rounded-2xl p-6 sticky top-24 space-y-5">
+                                    <div>
+                                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">분야</p>
+                                        <p class="text-gray-900 font-medium">소프트웨어 개발</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">기술 스택</p>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-3 py-1 text-xs rounded-full bg-white border border-gray-200 text-gray-700">Python</span>
+                                            <span class="px-3 py-1 text-xs rounded-full bg-white border border-gray-200 text-gray-700">Git</span>
+                                            <span class="px-3 py-1 text-xs rounded-full bg-white border border-gray-200 text-gray-700">CLI</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">운영 방식</p>
+                                        <p class="text-gray-600 text-sm leading-relaxed">아이디어 피칭 → 팀 구성 → 4~6주 스프린트 개발</p>
+                                    </div>
+                                    <a href="projects.html" class="magnetic-btn inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-[#00E87A] text-black font-semibold rounded-full hover:bg-[#00C060] transition-colors press-effect">
+                                        <span class="btn-text inline-flex items-center gap-2"><i class="ri-arrow-left-line"></i> 프로젝트 목록</span>
+                                    </a>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-16 bg-[#F8FAF8]">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <h2 class="text-gray-900 font-black text-2xl mb-8 section-reveal" style="font-family: 'Space Grotesk', sans-serif;">다른 프로젝트</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 stagger-children">
+                            <a href="project-detail-web.html" class="group flex gap-4 bg-white rounded-2xl p-4 hover:shadow-md transition-all tilt-card">
+                                <img src="./project_assets/wep_project.jpg" alt="차세대 웹 플랫폼" class="w-24 h-24 rounded-xl object-cover flex-shrink-0">
+                                <div>
+                                    <span class="text-xs font-semibold text-[#00C060]">Web</span>
+                                    <h3 class="font-bold text-gray-900 group-hover:text-[#00C060] transition-colors">차세대 웹 플랫폼</h3>
+                                    <p class="text-gray-500 text-sm mt-1">React</p>
+                                </div>
+                            </a>
+                            <a href="project-detail-game.html" class="group flex gap-4 bg-white rounded-2xl p-4 hover:shadow-md transition-all tilt-card">
+                                <img src="./project_assets/game_study.jpg" alt="창의적 게임 개발" class="w-24 h-24 rounded-xl object-cover flex-shrink-0">
+                                <div>
+                                    <span class="text-xs font-semibold text-[#00C060]">Game</span>
+                                    <h3 class="font-bold text-gray-900 group-hover:text-[#00C060] transition-colors">창의적 게임 개발</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Unity</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="bg-[#F0F4F0] mt-0">
+                <div class="max-w-7xl mx-auto px-6 pt-16 pb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+                        <div class="md:col-span-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
+                                <span class="font-bold text-xl text-gray-900" style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed mb-4">건국대학교 글로컬캠퍼스<br>IT 동아리</p>
+                            <div class="flex items-center gap-3">
+                                <a href="https://github.com/" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors"><i class="ri-github-line text-base"></i></a>
+                                <a href="https://instagram.com/" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors"><i class="ri-instagram-line text-base"></i></a>
+                                <a href="https://youtube.com/" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-[#00E87A] hover:text-black transition-colors"><i class="ri-youtube-line text-base"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="index.html">Home</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="about.html">About</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="projects.html">Projects</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="events.html">Events</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="members.html">Members</a></li>
+                                <li><a class="text-sm text-gray-500 hover:text-gray-900 transition-colors link-hover" href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">Contact</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2 text-sm text-gray-500">
+                                    <div class="w-4 h-4 flex items-center justify-center mt-0.5"><i class="ri-map-pin-line text-[#00E87A]"></i></div>
+                                    <span>충청북도 충주시 충원대로 268<br>건국대학교 글로컬캠퍼스 학생회관 423호</span>
+                                </li>
+                                <li class="flex items-center gap-2 text-sm text-gray-500">
+                                    <div class="w-4 h-4 flex items-center justify-center"><i class="ri-mail-line text-[#00E87A]"></i></div>
+                                    <span>회장 이메일: joonseonim@naver.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <p class="text-xs text-gray-400">© 2026 제 5세대 - 건국대학교 글로컬캠퍼스 IT 동아리. All rights reserved.</p>
+                        <div class="flex flex-col items-center sm:items-end gap-0.5">
+                            <p class="text-xs text-gray-400">Made with <strong class="text-[#00E87A]">❤</strong> by 5th Generation</p>
+                            <p class="text-[10px] text-gray-400/80 font-light">Created by 팀 류종걸, 박하원, 박윤승</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu && mobileMenuClose) {
+            const toggleMenu = (show) => {
+                if (show) {
+                    mobileMenu.classList.remove('hidden');
+                    setTimeout(() => mobileMenu.classList.remove('translate-x-full'), 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                    document.body.style.overflow = '';
+                }
+            };
+            mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+            mobileMenuClose.addEventListener('click', () => toggleMenu(false));
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+        }
+    </script>
+    <script src="./goons-interactions.js"></script>
+</body>
+</html>

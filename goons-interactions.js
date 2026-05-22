@@ -200,11 +200,19 @@
     // PARALLAX ON SCROLL
     // ============================================
     const parallaxElements = document.querySelectorAll('.parallax-img');
+    const isCoarsePointer = window.matchMedia('(hover: none)').matches
+        || window.matchMedia('(max-width: 768px)').matches;
 
     function updateParallax() {
         const scrollY = window.scrollY;
 
         parallaxElements.forEach((el) => {
+            // Parallax transform can push video out of view on touch viewports
+            if (isCoarsePointer && el.tagName === 'VIDEO') {
+                el.style.transform = 'translateZ(0) scale(1.05)';
+                return;
+            }
+
             const speed = parseFloat(el.dataset.speed) || 0.15;
             const rect = el.parentElement.getBoundingClientRect();
             const offset = (rect.top + scrollY - window.innerHeight / 2) * speed;
@@ -215,6 +223,24 @@
     if (parallaxElements.length > 0) {
         window.addEventListener('scroll', updateParallax, { passive: true });
         updateParallax();
+    }
+
+    // iOS / mobile: muted autoplay still needs an explicit play() after load
+    const heroVideo = document.querySelector('.hero-bg-video');
+    if (heroVideo) {
+        const tryPlayHeroVideo = () => {
+            const playPromise = heroVideo.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(() => {});
+            }
+        };
+
+        heroVideo.addEventListener('loadeddata', tryPlayHeroVideo, { once: true });
+        tryPlayHeroVideo();
+
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) tryPlayHeroVideo();
+        });
     }
 
     // ============================================
@@ -354,20 +380,32 @@
     // PAGE TRANSITION ON NAV LINKS
     // ============================================
     const pageTransition = document.querySelector('.page-transition');
+
+    function shouldSkipPageTransition(href) {
+        if (!href) return false;
+        if (href.includes('project-detail')) return true;
+        const onProjectDetail = /project-detail/i.test(window.location.pathname || '');
+        if (onProjectDetail && /projects\.html/.test(href)) return true;
+        return false;
+    }
+
     if (pageTransition) {
         document.querySelectorAll('a[href]').forEach((link) => {
             const href = link.getAttribute('href');
-            // Only for local HTML links
-            if (href && href.endsWith('.html') && !href.startsWith('http') && !href.startsWith('#')) {
+            // Only for local HTML links (skip project detail navigations)
+            if (href && href.endsWith('.html') && !href.startsWith('http') && !href.startsWith('#') && !shouldSkipPageTransition(href)) {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
 
-                    // Set transition text
+                    // Set transition text using href-derived page name (ignores button text)
                     const transitionText = pageTransition.querySelector('.transition-text');
                     if (transitionText) {
-                        let pageName = link.textContent.trim();
-                        if (!pageName || pageName === '') {
-                            pageName = href.replace('.html', '').replace(/^\w/, c => c.toUpperCase());
+                        // Derive page name from href (e.g., 'project.html' -> 'Project'), but show 'Home' for index
+                        let pageName = href.replace('.html', '');
+                        if (pageName.toLowerCase() === 'index') {
+                            pageName = 'Home';
+                        } else {
+                            pageName = pageName.replace(/^\w/, c => c.toUpperCase());
                         }
                         transitionText.textContent = pageName;
                     }

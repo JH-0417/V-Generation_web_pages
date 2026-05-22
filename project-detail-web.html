@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - 제 5세대</title>
-    <meta name="description" content="제 5세대 멤버들이 함께 만들어낸 웹, 게임, 소프트웨어 프로젝트를 소개합니다.">
+    <title>차세대 웹 플랫폼 – 제 5세대</title>
+    <meta name="description" content="제 5세대 웹 프로젝트 팀의 차세대 웹 플랫폼 상세 소개">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +16,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="noise-overlay">
-    <!-- Page Transition -->
     <div class="page-transition"><div class="transition-text"></div></div>
-
-    <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-circle"></div>
 
@@ -28,23 +26,22 @@
                 <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                     <a class="flex items-center gap-2 cursor-pointer" href="index.html">
                         <img src="favicon.ico" alt="제 5세대 로고" class="w-8 h-8 object-contain">
-                        <span class="font-bold text-lg tracking-tight transition-colors duration-300 text-gray-900" style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
+                        <span class="font-bold text-lg tracking-tight text-gray-900" style="font-family: 'Space Grotesk', sans-serif;">제 5세대</span>
                     </a>
                     <ul class="hidden md:flex items-center gap-1">
-                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="index.html">Home</a></li>
-                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="about.html">About</a></li>
-                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap bg-[#00E87A] text-black" href="projects.html">Projects</a></li>
-                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="events.html">Events</a></li>
-                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="members.html">Members</a></li>
-                        <li><a class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="contact.html">Contact</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="index.html">Home</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="about.html">About</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium bg-[#00E87A] text-black" href="projects.html">Projects</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="events.html">Events</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="members.html">Members</a></li>
+                        <li><a class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100" href="contact.html">Contact</a></li>
                     </ul>
-                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-colors cursor-pointer text-gray-900 hover:bg-gray-100" aria-label="메뉴 열기">
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg text-gray-900 hover:bg-gray-100" aria-label="메뉴 열기">
                         <i class="text-xl ri-menu-line"></i>
                     </button>
                 </nav>
             </header>
 
-            <!-- Mobile Menu Overlay -->
             <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl transition-all duration-300 translate-x-full hidden">
                 <div class="flex flex-col h-full p-6">
                     <div class="flex items-center justify-between mb-12">
@@ -71,73 +68,91 @@
             </div>
 
             <main>
-                <section class="pt-32 pb-16 bg-[#F0F4F0]">
+                <section class="pt-32 pb-12 bg-[#F0F4F0]">
                     <div class="max-w-7xl mx-auto px-6">
-                        <span class="text-[#00C060] text-sm font-semibold uppercase tracking-widest reveal-fade">Our Work</span>
-                        <h1 class="text-gray-900 font-black mt-3 leading-tight reveal-chars" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 10vw, 72px);">프로젝트</h1>
-                        <p class="text-gray-500 text-sm sm:text-base mt-4 max-w-xl leading-relaxed reveal-fade">제 5세대 멤버들이 함께 고민하고 만들어낸 결과물입니다.</p>
+                        <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6 reveal-fade">
+                            <a href="projects.html" class="hover:text-[#00C060] transition-colors link-hover">프로젝트</a>
+                            <i class="ri-arrow-right-s-line text-gray-400"></i>
+                            <span class="text-gray-900 font-medium">차세대 웹 플랫폼</span>
+                        </nav>
+                        <div class="flex flex-wrap gap-2 mb-4 reveal-fade">
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-[#E8FFF3] text-[#00C060]">Web</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-600">React</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-gray-200 text-gray-600">진행 중</span>
+                        </div>
+                        <h1 class="text-gray-900 font-black leading-tight reveal-chars" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 8vw, 56px);">차세대 웹 플랫폼</h1>
+                        <p class="text-gray-500 text-sm sm:text-lg mt-4 max-w-2xl leading-relaxed reveal-fade">최신 웹 기술을 활용해 사용자 경험을 극대화한 반응형 웹 서비스를 개발하는 프로젝트입니다.</p>
                     </div>
                 </section>
 
-
-
-                <section class="py-16 bg-white">
+                <section class="pb-16 bg-white">
                     <div class="max-w-7xl mx-auto px-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
-                            <!-- Project 1: Web -->
-                            <a href="project-detail-web.html" class="group block bg-[#F8FAF8] rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 tilt-card cursor-pointer">
-                                <div class="relative h-64 overflow-hidden img-reveal">
-                                    <img src="./project_assets/wep_project.jpg" alt="Web Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                        <div class="rounded-2xl overflow-hidden img-reveal mb-16">
+                            <img src="./project_assets/wep_project.jpg" alt="차세대 웹 플랫폼" class="w-full aspect-[16/9] object-cover object-center">
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                            <div class="lg:col-span-2 space-y-10 section-reveal">
+                                <div>
+                                    <h2 class="text-gray-900 font-bold text-2xl mb-4" style="font-family: 'Space Grotesk', sans-serif;">프로젝트 소개</h2>
+                                    <p class="text-gray-600 leading-relaxed">웹 프로젝트 팀은 동아리 홍보·활동 소개를 위한 공식 웹사이트를 시작으로, 멤버들이 스터디에서 배운 프론트엔드 기술을 실전에 적용합니다. 반응형 레이아웃, 접근성, 일관된 디자인 시스템을 목표로 하며 월간 발표회에서 진행 상황을 공유합니다.</p>
                                 </div>
-                                <div class="p-6">
-                                    <div class="flex gap-2 mb-4">
-                                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-[#E8FFF3] text-[#00C060]">Web</span>
-                                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-600">React</span>
+                                <div>
+                                    <h2 class="text-gray-900 font-bold text-2xl mb-4" style="font-family: 'Space Grotesk', sans-serif;">주요 활동</h2>
+                                    <ul class="space-y-3 text-gray-600">
+                                        <li class="flex items-start gap-3"><i class="ri-checkbox-circle-fill text-[#00E87A] mt-1"></i><span>UI/UX 와이어프레임 설계 및 컴포넌트 단위 개발</span></li>
+                                        <li class="flex items-start gap-3"><i class="ri-checkbox-circle-fill text-[#00E87A] mt-1"></i><span>반응형 웹 구현 및 크로스 브라우저 테스트</span></li>
+                                        <li class="flex items-start gap-3"><i class="ri-checkbox-circle-fill text-[#00E87A] mt-1"></i><span>Git 협업 워크플로우 및 코드 리뷰 문화 정착</span></li>
+                                        <li class="flex items-start gap-3"><i class="ri-checkbox-circle-fill text-[#00E87A] mt-1"></i><span>월간 발표회를 통한 피드백 반영 및 개선</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <aside class="lg:col-span-1 reveal-fade">
+                                <div class="bg-[#F8FAF8] rounded-2xl p-6 sticky top-24 space-y-5">
+                                    <div>
+                                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">분야</p>
+                                        <p class="text-gray-900 font-medium">웹 개발</p>
                                     </div>
-                                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#00C060] transition-colors">차세대 웹 플랫폼</h3>
-                                    <p class="text-gray-500 text-sm leading-relaxed mb-6">최신 웹 기술을 활용하여 사용자 경험을 극대화한 반응형 웹 서비스를 개발합니다. 스터디를 통해 배운 내용을 실무에 적용합니다.</p>
-                                    <span class="inline-flex items-center gap-2 text-sm font-bold text-gray-900 group-hover:text-[#00C060] transition-colors">
-                                        상세 보기 <i class="ri-arrow-right-line"></i>
-                                    </span>
+                                    <div>
+                                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">기술 스택</p>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-3 py-1 text-xs rounded-full bg-white border border-gray-200 text-gray-700">HTML/CSS</span>
+                                            <span class="px-3 py-1 text-xs rounded-full bg-white border border-gray-200 text-gray-700">JavaScript</span>
+                                            <span class="px-3 py-1 text-xs rounded-full bg-white border border-gray-200 text-gray-700">React</span>
+                                            <span class="px-3 py-1 text-xs rounded-full bg-white border border-gray-200 text-gray-700">Tailwind</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">운영 방식</p>
+                                        <p class="text-gray-600 text-sm leading-relaxed">주 1회 스터디 + 팀별 자율 개발, 월 1회 발표회</p>
+                                    </div>
+                                    <a href="projects.html" class="magnetic-btn inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-[#00E87A] text-black font-semibold rounded-full hover:bg-[#00C060] transition-colors press-effect">
+                                        <span class="btn-text inline-flex items-center gap-2"><i class="ri-arrow-left-line"></i> 프로젝트 목록</span>
+                                    </a>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-16 bg-[#F8FAF8]">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <h2 class="text-gray-900 font-black text-2xl mb-8 section-reveal" style="font-family: 'Space Grotesk', sans-serif;">다른 프로젝트</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 stagger-children">
+                            <a href="project-detail-game.html" class="group flex gap-4 bg-white rounded-2xl p-4 hover:shadow-md transition-all tilt-card">
+                                <img src="./project_assets/game_study.jpg" alt="창의적 게임 개발" class="w-24 h-24 rounded-xl object-cover flex-shrink-0">
+                                <div>
+                                    <span class="text-xs font-semibold text-[#00C060]">Game</span>
+                                    <h3 class="font-bold text-gray-900 group-hover:text-[#00C060] transition-colors">창의적 게임 개발</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Unity · C#</p>
                                 </div>
                             </a>
-
-                            <!-- Project 2: Game -->
-                            <a href="project-detail-game.html" class="group block bg-[#F8FAF8] rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 tilt-card cursor-pointer">
-                                <div class="relative h-64 overflow-hidden img-reveal">
-                                    <img src="./project_assets/game_study.jpg" alt="Game Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-                                </div>
-                                <div class="p-6">
-                                    <div class="flex gap-2 mb-4">
-                                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-[#E8FFF3] text-[#00C060]">Game</span>
-                                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-orange-100 text-orange-600">Unity</span>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#00C060] transition-colors">창의적 게임 개발</h3>
-                                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Unity 엔진과 C#을 기반으로 독창적인 게임 메커니즘을 설계하고 구현합니다. 모람제 시연을 목표로 완성도를 높입니다.</p>
-                                    <span class="inline-flex items-center gap-2 text-sm font-bold text-gray-900 group-hover:text-[#00C060] transition-colors">
-                                        상세 보기 <i class="ri-arrow-right-line"></i>
-                                    </span>
-                                </div>
-                            </a>
-
-                            <!-- Project 3: Software -->
-                            <a href="project-detail-software.html" class="group block bg-[#F8FAF8] rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 tilt-card cursor-pointer">
-                                <div class="relative h-64 overflow-hidden img-reveal">
-                                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" alt="Software Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-                                </div>
-                                <div class="p-6">
-                                    <div class="flex gap-2 mb-4">
-                                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-[#E8FFF3] text-[#00C060]">Software</span>
-                                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-600">Python</span>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#00C060] transition-colors">다목적 소프트웨어</h3>
-                                    <p class="text-gray-500 text-sm leading-relaxed mb-6">일상의 문제를 해결하기 위한 다양한 유틸리티와 도구를 개발합니다. 팀 간 협업을 통해 프로젝트 관리 역량을 강화합니다.</p>
-                                    <span class="inline-flex items-center gap-2 text-sm font-bold text-gray-900 group-hover:text-[#00C060] transition-colors">
-                                        상세 보기 <i class="ri-arrow-right-line"></i>
-                                    </span>
+                            <a href="project-detail-software.html" class="group flex gap-4 bg-white rounded-2xl p-4 hover:shadow-md transition-all tilt-card">
+                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=200" alt="다목적 소프트웨어" class="w-24 h-24 rounded-xl object-cover flex-shrink-0">
+                                <div>
+                                    <span class="text-xs font-semibold text-[#00C060]">Software</span>
+                                    <h3 class="font-bold text-gray-900 group-hover:text-[#00C060] transition-colors">다목적 소프트웨어</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Python</p>
                                 </div>
                             </a>
                         </div>
@@ -201,7 +216,6 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenuClose = document.getElementById('mobile-menu-close');
         const mobileMenu = document.getElementById('mobile-menu');
-
         if (mobileMenuBtn && mobileMenu && mobileMenuClose) {
             const toggleMenu = (show) => {
                 if (show) {
@@ -214,7 +228,6 @@
                     document.body.style.overflow = '';
                 }
             };
-
             mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
             mobileMenuClose.addEventListener('click', () => toggleMenu(false));
             mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => toggleMenu(false)));
