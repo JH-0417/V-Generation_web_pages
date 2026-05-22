@@ -303,10 +303,12 @@ html {
 .img-reveal {
     overflow: hidden;
     position: relative;
+    border-radius: 1rem; /* match Tailwind rounded-2xl */
 }
 
 .img-reveal img {
     transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    border-radius: inherit;
 }
 
 .img-reveal:hover img {
